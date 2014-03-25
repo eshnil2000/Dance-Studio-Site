@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="eshuApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Xpressionz Studios</title>
+        <!--meta name="viewport" content="width=620, user-scalable=no"-->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+        <link href='css/angular-carousel.css' rel='stylesheet' type='text/css'>
+        <link href='css/demo.css' rel='stylesheet' type='text/css'>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-touch.min.js"></script>
+    <script src="js/angular-carousel.js"></script>
+    <script src="js/rn-carousel-auto-slide.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+    <script src="js/testscript.js"></script>
+    <link href='fullcalendar-1.6.4/fullcalendar/fullcalendar.css' rel='stylesheet' />
+    <!--link href='bootstrap-fullcalendar.css' rel='stylesheet' /-->
+    <link href='fullcalendar-1.6.4/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+    <script src='fullcalendar-1.6.4/lib/jquery.min.js'></script>
+    <script src='fullcalendar-1.6.4/lib/jquery-ui.custom.min.js'></script>
+    <script src='fullcalendar-1.6.4/fullcalendar/fullcalendar.min.js'></script>
+    <link href='css/fullcalendar.css'  rel='stylesheet'  type='text/css' />
+
+    </head>
+    <body >
+
+        <header>
+            <nav class="navbar navbar-default">
+            <div class="container"  ng-controller="DemoCtrl" >
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" style="color:#F15926; font-weight:bold; font-style:italic; font-family: 'Arial', fantasy;">Xpressionz Studios</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right"  >
+                    <li><a href="#" ><i class="fa fa-home"></i> Home</a></li>
+                    <li ><a href="#eventsCalendar" ng-click="setMaster( $event)"><i class="fa fa-shield"></i> Events Calendar</a></li>
+                    <li><a href="http://127.0.0.1:3005"><i class="fa fa-edit"></i> Blog</a></li>
+                    <!--li><a href="#signUp"><i class="fa fa-inbox"></i> Sign Up</a></li-->
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+                    <!--li><a href="#specialEvents"><i class="fa fa-comment"></i> Special Events</a></li-->
+                </ul>
+            </div>
+            </nav>
+        </header>
+
+       
+        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+        <div id="main">
+            
+            <!--{{ message }} this would directly bring in $scope.message variable from the controller script-- >
+            <!-- angular templating -->
+            <!-- this is where content will be injected -->
+        
+
+        <div ng-controller="contactController">
+             <div class="ng-view" ></div>
+        </div>
+        </div>
+        
+        
+        <br><br>
+
+        <!-- AddThis Smart Layers BEGIN -->
+        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+        
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5205894e1544c811"></script>
+        <script type="text/javascript">
+          addthis.layers({
+            'theme' : 'transparent',
+            'share' : {
+              'position' : 'right',
+              'numPreferredServices' : 5,
+            },  
+            'whatsnext' : {},  
+            'recommended' : {} 
+          });
+        </script>
+        <!-- AddThis Smart Layers END -->
+    </body>
+   
+</html>

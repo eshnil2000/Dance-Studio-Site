@@ -1,0 +1,28 @@
+<!-- home.html -->
+	<div ng-init='hidePictures="false"'>
+            <label>
+            <input id = "picCheckbox" type="checkbox" ng-model="hidePictures" >
+            Hide Pictures
+            
+            </label>  
+        </div>
+
+        <div  ng-controller="DemoCtrl" ng-hide="hidePictures" >
+        <ul rn-carousel-auto-slide="5" rn-carousel rn-carousel-control rn-carousel-indicator rn-carousel-buffered class="my-slider ng-cloak">
+            <li ng-repeat="slide in slides track by slide.label" ng-style="{'background-image': 'url(' + slide.img + ')'}">
+                <!--div class="debug">
+                    {{ slide.label }} / {{ slides.length }}
+                    <br>
+                    carouselIndex: {{ carouselIndex }}<br>
+                    carouselBufferIndex: {{ carouselBufferIndex }}<br>
+                </div-->
+            </li>
+        </ul>
+        </div>
+
+	<div class="jumbotron text-center">
+		<h2>Creative Arts & Bollywood Dance classes</h1>
+
+		<p>{{ message }}</p>
+		
+	</div>
